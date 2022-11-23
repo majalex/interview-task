@@ -37,13 +37,14 @@
     background-color: #000099;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .headroom>.o1,
 .o3 {
-    display: none;
+    z-index: -1;
 }
 
 .cell>.fa-solid,
@@ -82,7 +83,25 @@
 }
 
 .container-navigation-mobile {
-    display: none;
+   z-index: 999;
+   height: 100vh;
+   overflow: hidden;
+   display: none;
+}
+
+.navigation-mobile >ul {
+    padding: 0;
+}
+.navigation-mobile >ul >li {
+    list-style: none;
+    text-transform: uppercase;
+    color: #000099;
+    font-weight: 900;
+    border-top: 2px solid #009;
+    border-bottom: 2px solid #009;
+    font-size: .875rem;
+    line-height: .875rem;
+    padding: 0.625rem 0 0.625rem 1rem;
 }
 
 
@@ -415,7 +434,7 @@ h2 {
     background-color: #dbdbdb;
 }
 
-.tab button:focus{
+.tab button:focus {
     background-color: #fff;
     border-color: #dbdbdb;
     border-bottom-color: #fff;
@@ -496,8 +515,9 @@ article>p,
     height: 8rem;
     width: 8rem;
 }
+
 /* fifth_section */
-.links-container{
+.links-container {
     padding: 50px;
     padding-top: 30px;
 
@@ -512,16 +532,16 @@ article>p,
     color: #023e8a;
 }
 
-.links > li {
+.links>li {
     list-style: none;
     margin-bottom: 0.75rem;
 }
 
-.links > li:not(:last-child){
+.links>li:not(:last-child) {
     margin-right: 1.5rem;
 }
 
-.links > li > ul {
+.links>li>ul {
     padding: 0;
     font-weight: 100;
     text-transform: none;
@@ -531,29 +551,67 @@ article>p,
 
 }
 
-.links > li > ul > li {
+.links>li>ul>li {
     list-style: none;
     margin-bottom: 0.6rem;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
     justify-content: center;
     margin-top: 100px;
 }
 
-.social-icons > div {
+.social-icons>div {
     display: flex;
     align-items: center;
     padding-right: 1.25rem;
 }
 
-.social-icons > div > p {
+.social-icons>div>p {
     margin-left: 0.5rem;
     color: #023e8a;
     font-weight: 100;
 }
 
-.social-icons > div > img {
+.social-icons>div>img {
     width: 2.2rem;
+}
+
+/* ==================  FOOTER ================== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: #a7a299;
+    padding: 20px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+footer>div {
+    width: 33.33%;
+    margin: 0 70px;
+}
+
+footer>div>ul {
+    padding: 0;
+}
+
+footer>div>ul>li {
+    list-style: none;
+    display: inline;
+}
+
+/* ==================  RESPONSIVE STYLES ================== */
+
+@media screen and (max-width: 1087px) {
+    .container-navigation-desktop {
+        display: none;
+    }
+
+    .headroom>.o1,
+    .o3 {
+        z-index: 3;
+    }
 }

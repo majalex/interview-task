@@ -19,14 +19,31 @@
 
 <body>
     <header>
-        <section class="headroom">
-            <div class="cell o1"><i class="fa-solid fa-bars"></i></div>
-            <div class="cell o2"><img src="logo.svg" alt="SAS logo" /></div>
-            <div class="cell o3"><i class="fa-solid fa-magnifying-glass"></i></div>
-        </section>
-        <section class="container-navigation-desktop">
-            <div class="empty"></div>
-            <nav class="navigation-desktop">
+        <div class="sticky-menu">
+            <section class="headroom">
+                <div class="cell o1" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="cell o2"><img src="logo.svg" alt="SAS logo" /></div>
+                <div class="cell o3"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </section>
+            <section class="container-navigation-desktop">
+                <div class="empty"></div>
+                <nav class="navigation-desktop">
+                    <ul>
+                        <li>About SAS</li>
+                        <li>Sustainability</li>
+                        <li>Investor relations</li>
+                        <li>Newsroom</li>
+                        <li>Career</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+                <div class="menu-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </section>
+        </div>
+        <section class="container-navigation-mobile" id="toggle">
+            <nav class="navigation-mobile">
                 <ul>
                     <li>About SAS</li>
                     <li>Sustainability</li>
@@ -36,21 +53,6 @@
                     <li>Contact</li>
                 </ul>
             </nav>
-            <div class="menu-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-        </section>
-        <section class="container-navigation-mobile">
-            <div class="empty"></div>
-            <nav class="navigation-desktop">
-                <ul>
-                    <li>About SAS</li>
-                    <li>Sustainability</li>
-                    <li>Investor relations</li>
-                    <li>Newsroom</li>
-                    <li>Career</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-            <div class="menu-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         </section>
     </header>
     <main>
@@ -477,7 +479,27 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div>
+            <h6>SAS 2020</h6>
+            <p>
+                SAS AB, registration number 556606-8499, SE-195 87 <br>
+                Stockholm, Sweden
+            </p>
+        </div>
+        <div>
+            <ul>
+                <li>Book a trip with SAS</li>
+                <li>| Contacts</li>
+                <li>| SAS Cargo</li>
+                <li>| Usage of cookies</li>
+                <li>Terms and conditions</li>
+            </ul>
+        </div>
+        <div>
+            <img src="./img/starAlliance.png">
+        </div>
+    </footer>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

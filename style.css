@@ -415,7 +415,7 @@ h2 {
     background-color: #dbdbdb;
 }
 
-.tab button.active{
+.tab button:focus{
     background-color: #fff;
     border-color: #dbdbdb;
     border-bottom-color: #fff;
@@ -495,4 +495,65 @@ article>p,
 .post>svg {
     height: 8rem;
     width: 8rem;
+}
+/* fifth_section */
+.links-container{
+    padding: 50px;
+    padding-top: 30px;
+
+    background-color: #f4f4f4;
+}
+
+.links {
+    display: flex;
+    padding: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #023e8a;
+}
+
+.links > li {
+    list-style: none;
+    margin-bottom: 0.75rem;
+}
+
+.links > li:not(:last-child){
+    margin-right: 1.5rem;
+}
+
+.links > li > ul {
+    padding: 0;
+    font-weight: 100;
+    text-transform: none;
+    font-size: .938rem;
+    line-height: 1.25rem;
+    margin-top: 1rem;
+
+}
+
+.links > li > ul > li {
+    list-style: none;
+    margin-bottom: 0.6rem;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.social-icons > div {
+    display: flex;
+    align-items: center;
+    padding-right: 1.25rem;
+}
+
+.social-icons > div > p {
+    margin-left: 0.5rem;
+    color: #023e8a;
+    font-weight: 100;
+}
+
+.social-icons > div > img {
+    width: 2.2rem;
 }
